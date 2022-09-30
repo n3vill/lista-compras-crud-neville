@@ -1,0 +1,44 @@
+{
+  "compras": [
+    {
+      "item": "Pizza",
+      "quantidade": "20",
+      "id": 4
+    },
+    {
+      "item": "Arroz ",
+      "quantidade": "8",
+      "id": 5
+    },
+    {
+      "item": "Feijão",
+      "quantidade": 3,
+      "id": 6
+    },
+    {
+      "item": "Batata",
+      "quantidade": 7,
+      "id": 7
+    },
+    {
+      "item": "Heineken",
+      "quantidade": 7,
+      "id": 8
+    },
+    {
+      "item": "Ovo",
+      "quantidade": 13,
+      "id": 9
+    },
+    {
+      "item": "Cebola",
+      "quantidade": 2,
+      "id": 10
+    },
+    {
+      "item": "Xilito",
+      "quantidade": 3,
+      "id": 11
+    }
+  ]
+}
