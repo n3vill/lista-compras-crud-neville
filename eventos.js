@@ -1,5 +1,15 @@
 const API_URL= 'http://localhost:3000'
 
+function marcarTodos() {
+    let todos = document.querySelectorAll('[data-check = "acao"]');
+
+    todos.forEach((cadaCheck) => {
+        cadaCheck.checked = check_all.checked;
+    });
+
+    acionarBotaoExcluir();
+}
+
 function buscarParaEditar(id) {
     input_editar_id.value = id;
 
@@ -77,7 +87,7 @@ async function excluir (id) {
 
 function atualizarLista() {
 
-    tabela_compras.innerHTML = '';
+    tabela_compras.innerHTML = '';  //limpar tabela a cada vez que ela é chamada
 
     fetch('http://localhost:3000/compras')
     .then(function(resposta){
@@ -87,7 +97,8 @@ function atualizarLista() {
         lista.forEach(function (cadaItem){
             tabela_compras.innerHTML += `
             <tr>
-                <td>${cadaItem.id} </td>
+                <td><input onclick="acionarBotaoExcluir()" value= "${cadaItem.id}" data-check="acao" type ="checkbox"></td>
+                <td>${cadaItem.id}</td>
                 <td>${cadaItem.item}</td>
                 <td>${cadaItem.quantidade}</td>
                 <td>
